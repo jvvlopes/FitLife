@@ -31,7 +31,7 @@ export default function Vida(){
             <div className="w-4/5 h-[40%] overflow-hidden">
                 <video src={VidaVid} className="item" autoPlay muted loop></video>
             </div>
-            <div className="w-4/5 h-1/4">
+            <div className="w-4/5 h-1/4 snap-x p-3 flex gap-5 overflow-auto">
                 {
                     life?.map((lif, index) => {
                         return <CardVida id={index} categorie={lif.categoria} date={lif.data} food={lif.food} plus={lif.plus} key={index} remove={handleRemove} />

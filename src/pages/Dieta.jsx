@@ -32,7 +32,7 @@ export default function Dieta(){
             <div className="w-4/5 h-[40%] overflow-hidden">
                 <video src={DietaVid} autoPlay muted loop></video>
             </div>
-            <div className="w-4/5 h-1/4">
+            <div className="w-4/5 h-1/4 snap-x p-3 flex gap-5 overflow-auto">
                 {
                     dietas?.map((diet, index) => {
                         return <CardDieta id={index} categorie={diet.categoria} date={diet.data} food={diet.food} plus={diet.plus} key={index} remove={handleRemove} />
